@@ -1,0 +1,49 @@
+# Project: Scientific Calculator
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o
+LINKOBJ  = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o
+LIBS     = -L"D:/Software/Dev-Cpp/MinGW64/lib" -L"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Software/Dev-Cpp/MinGW64/include" -I"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Software/Dev-Cpp/MinGW64/include" -I"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Scientific Calculator.exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+BrochureChinese.o: BrochureChinese.c
+	$(CC) -c BrochureChinese.c -o BrochureChinese.o $(CFLAGS)
+
+CalculateChinese.o: CalculateChinese.c
+	$(CC) -c CalculateChinese.c -o CalculateChinese.o $(CFLAGS)
+
+Derivative.o: Derivative.c
+	$(CC) -c Derivative.c -o Derivative.o $(CFLAGS)
+
+Integral.o: Integral.c
+	$(CC) -c Integral.c -o Integral.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+PrintScreenChinese.o: PrintScreenChinese.c
+	$(CC) -c PrintScreenChinese.c -o PrintScreenChinese.o $(CFLAGS)
+
+StatisticChinese.o: StatisticChinese.c
+	$(CC) -c StatisticChinese.c -o StatisticChinese.o $(CFLAGS)
+
+TriangleChinese.o: TriangleChinese.c
+	$(CC) -c TriangleChinese.c -o TriangleChinese.o $(CFLAGS)
