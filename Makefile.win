@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o
-LINKOBJ  = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o
+OBJ      = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o Calculate.o
+LINKOBJ  = BrochureChinese.o CalculateChinese.o Derivative.o Integral.o main.o PrintScreenChinese.o StatisticChinese.o TriangleChinese.o Calculate.o
 LIBS     = -L"D:/Software/Dev-Cpp/MinGW64/lib" -L"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"D:/Software/Dev-Cpp/MinGW64/include" -I"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"D:/Software/Dev-Cpp/MinGW64/include" -I"D:/Software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -47,3 +47,6 @@ StatisticChinese.o: StatisticChinese.c
 
 TriangleChinese.o: TriangleChinese.c
 	$(CC) -c TriangleChinese.c -o TriangleChinese.o $(CFLAGS)
+
+Calculate.o: Calculate.c
+	$(CC) -c Calculate.c -o Calculate.o $(CFLAGS)

@@ -30,7 +30,9 @@ int CalculateChinese() {
 			continue; 
 		} 		
         else if (strcmp(input, "#") == 0) {
-            printf("您已进入主菜单\n");
+            printf("您已进入常规模式，可以进行普通四则运算\n");
+            Calculate();
+            BrochureChinese();
             continue;
         }
         else if (strcmp(input, "#4") == 0) {
@@ -38,10 +40,6 @@ int CalculateChinese() {
             getchar();
             printf("您已进入主菜单\n");
             continue;
-        }
-        else {
-            printf("对不起！该功能尚未开发\n");
-            break;
         }
     } 
 }

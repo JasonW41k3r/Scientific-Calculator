@@ -8,3 +8,4 @@ void TriangleChinese();
 void StatisticChinese();
 void Integral();
 void Derivative();
+void Calculate();
