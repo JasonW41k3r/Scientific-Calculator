@@ -1,3 +1,8 @@
+/*
+**代码开发：韦百强
+**代码开发：费庆辉 
+**代码审核：饶鉴晟
+*/
 #include<stdio.h>
 #include<math.h>
     char Low2Up(char c);
@@ -10,58 +15,55 @@ void Integral()
 	void logarithmicfunction();//对数函数
 	void inversetrigonometricfunctions();//反三角函数
 	char input;
-	while(1)
-{
-PrintScreen();//输出主屏幕
-input = iGetChar();//输入一个字符（非空格、非回车、ASCII码大于零）
-input = Low2Up(input);//转化为大写字母
-if(input == 'Z')
-break;
-if (input == '#')
-break;
-switch(input)
-{
-case 'A':PowerFunction();break;
-case 'B':logarithmicfunction();break;
-case 'C':;break;
-case 'D':Circularfunctions();break;
-case 'E':inversetrigonometricfunctions();break;
-case 'F':;break;
-default:printf("输入错误\n\n");//如果输入的是其它字符，则输入错误
-}
-}
-
+	while(1){
+		PrintScreen();//输出主屏幕
+		input = iGetChar();//输入一个字符（非空格、非回车、ASCII码大于零）
+		input = Low2Up(input);//转化为大写字母
+		if(input == 'Z')
+			break;
+		if (input == '#')
+			break;
+		switch(input)
+		{
+			case 'A':PowerFunction();break;
+			case 'B':logarithmicfunction();break;
+			case 'C':;break;
+			case 'D':Circularfunctions();break;
+			case 'E':inversetrigonometricfunctions();break;
+			case 'F':;break;
+			default:printf("输入错误\n\n");//如果输入的是其它字符，则输入错误
+		}
+	}
 }
 
 void PrintScreen()//输出主屏幕
 {
-printf("********************************\n");
-printf("* 欢迎使用定积分计算器 *\n");
-printf("********************************\n");
-printf("A 幂函数 B 对数函数\n");
-printf("C 指数函数 D 三角函数\n");
-printf("E 反三角函数\n");
-printf("Z 退出\n");
-printf("请输入所需功能：");
+	printf("********************************\n");
+	printf("* 欢迎使用定积分计算器 *\n");
+	printf("********************************\n");
+	printf("A 幂函数 B 对数函数\n");
+	printf("C 指数函数 D 三角函数\n");
+	printf("E 反三角函数\n");
+	printf("Z 退出\n");
+	printf("请输入所需功能：");
 }
 
 
-	char Low2Up(char c)//如果输入是小写字母，就转化为大写字母，否则不用管
+char Low2Up(char c)//如果输入是小写字母，就转化为大写字母，否则不用管
 {
-if(c >= 'a' && c <= 'z')
-c=c-32;
-return c;
+	if(c >= 'a' && c <= 'z')
+		c=c-32;
+	return c;
 }
 
-	char iGetChar()//输入一个字符（非空格、非回车、ASCII码大于零）
+char iGetChar()//输入一个字符（非空格、非回车、ASCII码大于零）
 {
-char c;
-do
-{
-c = getchar();
-}
-while(c == '\n' || c== ' '  ||c<0);
-return c;
+	char c;
+	do {
+		c = getchar();
+	}	
+	while(c == '\n' || c== ' ' || c < 0);
+	return c;
 }
 
 
@@ -106,7 +108,7 @@ return c;
 			else//分子是偶数， 0
 			{
 				if(Parity(y))//分母是奇数， 1
-					printf("结果为：%lf\n",(a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
+					printf("结果为：%lf\n", (a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
 				else//分母是偶数， 0
 				{
 					if(x >= y)
@@ -116,7 +118,7 @@ return c;
 						if(c < 0 && d < 0)
 						printf("输入上下限错误！\n\n");
 					else
-						printf("结果为：%lf\n\n",(a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
+						printf("结果为：%lf\n\n", (a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
 					}
 				}
 			}
@@ -227,7 +229,7 @@ return c;
         printf("C 正切函数\n");
         printf("Z 退出\n");
         printf("请输入所需功能：");
-		n = GetChar();
+		n = iGetChar();
 		n = Low2Up(n);
 		switch (n)
 		{
@@ -318,7 +320,7 @@ return c;
         printf("C 反正切函数\n");
         printf("Z 退出\n");
         printf("请输入所需功能：");
-		n = GetChar();
+		n = iGetChar();
 		n = Low2Up(n);
 		switch (n)
 		{

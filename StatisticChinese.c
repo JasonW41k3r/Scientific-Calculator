@@ -19,6 +19,7 @@ typedef struct {
 	double num;
 	int count;
 } data;
+
 void StatisticChinese()
 {
     int i, count = 0;
@@ -30,13 +31,13 @@ void StatisticChinese()
     printf("数据上限为200\n");
     printf("以“0”结束导入\n");
     printf("************************************\n");
-    for(i=0;i<200;i++)
+    for(i = 0; i < 200; i++)
     {
-        printf( "请输入第%d个数据：\n", i+1 );
-        scanf( "%lf", &numbers[i] );
+        printf( "请输入第%d个数据：\n", i + 1 );
+        scanf("%lf", &numbers[i]);
         
-        printf( "\n" );
-        if( numbers[i] == 0.0 ) break;
+        printf("\n");
+        if(numbers[i] == 0.0) break;
         count++;
     }
 
@@ -51,10 +52,10 @@ void StatisticChinese()
 	    printf("I 计算变异系数   Z 退出\n");
         printf("请选择功能：\n");
 
-        input=GetChar();
-        input=Up(input);
+        input = GetChar();
+        input = Up(input);
 
-		if(input=='Z') break;
+		if(input == 'Z') break;
 		else if (input == '#') break;
 
 		switch(input)
@@ -155,72 +156,76 @@ double Mid(double numbers[], int length)
 	return ret;
 }
 
-double Min( double numbers[], int length )
+double Min(double numbers[], int length)
 {
     int i;
     double min = numbers[0];
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
     {
-        if( numbers[i] < min )
+        if(numbers[i] < min)
             min = numbers[i];
     }
     return min;
 }
 
-double Aver( double numbers[], int length )
+double Aver(double numbers[], int length)
 {
     int i;
     double aver, sum=0;
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
         sum = sum + numbers[i];
     aver = sum / length;
     return aver;
 }
 
-double Vari( double numbers[], int length )
+double Vari(double numbers[], int length)
 {
     int i;
-    double aver, vari, Numbers[200], sum=0, Sum=0;
+    double aver, vari, Numbers[200], sum = 0, Sum = 0;
 
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
         sum = sum + numbers[i];
     aver = sum / length;
-    for( i = 0; i < length; i++ )
-        Numbers[i] = ( numbers[i] - aver ) * ( numbers[i] - aver );
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
+        Numbers[i] = (numbers[i] - aver) * (numbers[i] - aver);
+    for(i = 0; i < length; i++)
         Sum = Sum + Numbers[i];
     vari = Sum / length;
     return vari;
 }
 
-double Disc( double numbers[], int length )
+/*
+**代码开发：刘佳鑫 
+**代码审核：饶鉴晟
+*/
+double Disc(double numbers[], int length)
 {
 	int i;
-    double disc, aver, Numbers[200], sum=0, Sum=0;
+    double disc, aver, Numbers[200], sum = 0, Sum = 0;
 
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
         sum = sum + numbers[i];
     aver = sum / length;
-    for( i = 0; i < length; i++ )
-        Numbers[i] = ( numbers[i] - aver ) * ( numbers[i] - aver );
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
+        Numbers[i] = (numbers[i] - aver) * (numbers[i] - aver);
+    for(i = 0; i < length; i++)
         Sum = Sum + Numbers[i];
-    disc = sqrt( Sum / length );
+    disc = sqrt(Sum / length);
 	return disc;
 }
 
-double Rang( double numbers[], int length )
+double Rang(double numbers[], int length)
 {
 	int i;
     double rang, max = numbers[0], min = numbers[0];
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
     {
-        if( numbers[i] > max )
+        if(numbers[i] > max)
             max = numbers[i];
     }
-    for( i = 0; i < length; i++ )
+    for(i = 0; i < length; i++)
     {
-        if( numbers[i] < min )
+        if(numbers[i] < min)
             min = numbers[i];
     }
 	rang = max - min;

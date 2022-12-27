@@ -1,3 +1,7 @@
+/*
+**代码开发：饶鉴晟 
+**代码审核：饶鉴晟
+*/
 #include <stdio.h>
 #include <math.h>
 #include "headers.h"

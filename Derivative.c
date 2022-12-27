@@ -1,10 +1,7 @@
-//
-//  main.c
-//  hanshudaoshu
-//
-//  Created by Deguang.Pang on 11/12/2022.
-//
-
+/*
+**代码开发：庞越飞 
+**代码审核：饶鉴晟
+*/
 #include <stdio.h>
 #include <math.h>
 #include "headers.h"

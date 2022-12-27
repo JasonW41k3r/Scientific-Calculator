@@ -1,3 +1,7 @@
+/*
+**代码开发：麦永毅 
+**代码审核：饶鉴晟
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>

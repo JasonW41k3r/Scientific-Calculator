@@ -1,3 +1,7 @@
+/*
+**代码开发：饶鉴晟 
+**代码审核：饶鉴晟
+*/
 #include <stdio.h>
 int BrochureChinese() {
     printf("这是一款由中山大学航空航天学院AlgoCaculate团队开发于2022年的科学计算器。\n"); 

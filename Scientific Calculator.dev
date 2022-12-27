@@ -24,7 +24,7 @@ HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
 CommandLine=
-Folders=
+Folders=Functions,Headers,main
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
@@ -53,7 +53,7 @@ SyncProduct=1
 [Unit1]
 FileName=BrochureChinese.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -63,7 +63,7 @@ BuildCmd=
 [Unit2]
 FileName=CalculateChinese.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -73,7 +73,7 @@ BuildCmd=
 [Unit3]
 FileName=Derivative.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -83,7 +83,7 @@ BuildCmd=
 [Unit4]
 FileName=headers.h
 CompileCpp=0
-Folder=
+Folder=Headers
 Compile=1
 Link=1
 Priority=1000
@@ -93,7 +93,7 @@ BuildCmd=
 [Unit5]
 FileName=Integral.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -103,7 +103,7 @@ BuildCmd=
 [Unit6]
 FileName=main.c
 CompileCpp=0
-Folder=
+Folder=main
 Compile=1
 Link=1
 Priority=1000
@@ -113,7 +113,7 @@ BuildCmd=
 [Unit7]
 FileName=PrintScreenChinese.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -123,7 +123,7 @@ BuildCmd=
 [Unit8]
 FileName=StatisticChinese.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -133,7 +133,7 @@ BuildCmd=
 [Unit9]
 FileName=TriangleChinese.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
@@ -143,7 +143,7 @@ BuildCmd=
 [Unit10]
 FileName=Calculate.c
 CompileCpp=0
-Folder=
+Folder=Functions
 Compile=1
 Link=1
 Priority=1000
