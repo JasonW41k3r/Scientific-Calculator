@@ -93,7 +93,7 @@ void Derivative(){
             //printf("Please select the form of the value to be queried:1. Constant function; 2. Trigonometric function; 3. Tangent function; 4. Secant function; 5. Exponential function; 6. Logarithmic function; 7. Arcsine function; 8. Arctangent function\n");
             b = GetChar();
             printf("请输入切点处的横坐标: x = ");//printf("Please enter the abscissa at the tangent point: x = ");
-            scanf("%lf",&C);//在此处传入
+            scanf("%lf", &C);//在此处传入
             switch(b)
             {
                 case '1':

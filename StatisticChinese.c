@@ -2,12 +2,12 @@
 #include<math.h>
 #include "headers.h"
 
-double Max( double numbers[], int length );
-double Min( double numbers[], int length );
-double Aver( double numbers[], int length );
-double Vari( double numbers[], int length );
-double Disc( double numbers[], int length );
-double Rang( double numbers[], int length );
+double Max(double numbers[], int length);
+double Min(double numbers[], int length);
+double Aver(double numbers[], int length);
+double Vari(double numbers[], int length);
+double Disc(double numbers[], int length);
+double Rang(double numbers[], int length);
 double Mid(double numbers[], int length);
 double Most(double numbers[], int length);
 double Evolve(double numbers[], int length);

@@ -96,7 +96,7 @@ char iGetChar()//输入一个字符（非空格、非回车、ASCII码大于零）
 			if(Parity(x))//分子为是奇数，1
 			{
 				if(Parity(y))//分母是奇数，1
-					printf("结果为：%.3lf\n\n",(a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
+					printf("结果为：%lf\n\n",(a * pow(c, (n + 1)) / (n + 1.0)) - (a * pow(d ,(n + 1)) / (n + 1.0)) + b * (c - d));
 				else//分母是偶数， 0
 				{
 					if(c < 0 && d < 0)
